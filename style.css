@@ -158,6 +158,17 @@ body {
   grid-area: edu;
   align-self: center;
 }
+
+.about-wrapper .exp-sec {
+  grid-area: exp-sec;
+  align-self: center;
+}
+
+.about-wrapper .exp {
+  grid-area: exp;
+  align-self: center;
+}
+
 .about-wrapper .skills-sec {
   grid-area: skills-sec;
   align-self: center;
@@ -445,6 +456,8 @@ body {
       'bio'
       'edu-sec'
       'edu'
+      'exp-sec'
+      'exp'
       'skills-sec'
       'skills'
       'ach-sec'
@@ -503,6 +516,7 @@ body {
       'nc nc nc nc'
       'bio-sec bio bio bio'
       'edu-sec edu edu edu'
+      'exp-sec exp exp exp'
       'skills-sec skills skills skills'
       'ach-sec ach ach ach';
   }
