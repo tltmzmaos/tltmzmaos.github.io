@@ -1,0 +1,218 @@
+baseURL = "http://example.org/"
+
+# Change the default theme to be use when building the site with Hugo
+theme = "LoveIt"
+
+# website title
+title = "JML"
+
+# language code ["en", "zh-CN", "fr", "pl", ...]
+languageCode = "en"
+# language name ["English", "简体中文", "Français", "Polski", ...]
+languageName = "English"
+
+paginate = 10
+copyright = "Jongmin Lee"
+
+# Author config
+[author]
+  name = "Jongmin Lee"
+  email = "tltmzmaos@gmail.com"
+  link = ""
+
+# Menu config
+[menu]
+  [[menu.main]]
+    weight = 1
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+  [[menu.main]]
+    weight = 2
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+  [[menu.main]]
+    weight = 3
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "Posts"
+    url = "/posts/"
+    # title will be shown when you hover on this menu link
+    title = ""
+  
+[params]
+  defaultTheme = "auto"
+  
+  [params.header]
+    desktopMode = "fixed"
+    mobileMode = "auto"
+    [params.header.title]
+      logo = ""
+      name = "Jongmin Lee's"
+  
+  [params.footer]
+    enable = true
+    hugo = false
+    copyright = true
+    author = true
+    since = 2024
+  
+  [params.home]
+    [params.home.profile]
+      enable = true
+      gravatarEmail = "tltmzmaos@gmail.com"
+      avatarURL = ""
+      title = "Jongmin Lee"
+      subtitle = "Dedicated Software Developer"
+      social = true
+    [params.home.posts]
+      enable = true
+      paginate = 10
+  
+  [params.social]
+    GitHub = "tltmzmaos"
+    Linkedin = "jml1228"
+    Email = "tltmzmaos@gmail.com"
+
+  [params.page]
+    fontawesome = true
+
+    [params.pages.toc]
+      enable = true
+      auto = true
+    [params.page.share]
+      enable = true
+    [params.page.comment]
+      enable = true
+      [params.page.comment.giscus]
+        enable = true
+        # You can refer to the official documentation of giscus to use the following configuration.
+        repo = "tltmzmaos/tltmzmaos.github.io"
+        repoId = "MDEwOlJlcG9zaXRvcnkzNTYxNDEzMjA="
+        category = "General"
+        categoryId = "DIC_kwDOFTpJCM4Ccpg8"
+        # automatically adapt the current theme i18n configuration when empty
+        lang = "en"
+        mapping = "pathname"
+        reactionsEnabled = "1"
+        emitMetadata = "0"
+        inputPosition = "bottom"
+        lazyLoading = false
+        lightTheme = "light"
+        darkTheme = "dark"
+      [params.page.comment.utterances]
+        enable = true
+        # owner/repo
+        repo = ""
+        issueTerm = "pathname"
+        label = ""
+        lightTheme = "github-light"
+        darkTheme = "github-dark"
+      [params.page.comment.facebook]
+        enable = true
+    [params.page.seo]
+      images = []
+      [params.page.seo.publisher]
+        name = "Jongmin Lee"
+        logoUrl = ""
+    [params.page.code]
+      copy = true
+      maxShownLines = 50
+    [params.page.math]
+      enable = true
+      inlineLeftDelimiter = ""
+      inlineRightDelimiter = ""
+      blockLeftDelimiter = ""
+      blockRightDelimiter = ""
+      copyTex = true
+      mhchem = true
+    
+  [params.search]
+    enable = true
+    # type of search engine ["lunr", "algolia"]
+    type = "algolia"
+    contentLength = 4000
+    placeholder = "Enter a keyword to search"
+    maxResultLength = 10
+    snippetLength = 30
+    highlightTag = "em"
+    absoluteURL = false
+    [params.search.algolia]
+      index = ""
+      appID = ""
+      searchKey = ""
+
+  [params.section]
+    paginate = 20
+    dateFormat = "01-02"
+    rss = 10
+  
+  [params.analytics]
+    enable = false
+    [params.analytics.google]
+      id = ""
+      anonymizeIP = true
+
+  [params.cookieconsent]
+    enable = true
+
+  [params.cdn]
+    
+
+# Markup related configuration in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[comments]
+  provider = "giscus"
+  commentable = {page = true, post = true, docs = false, project = false, publication = true, talk = false}
+  [comments.giscus]
+    # You can refer to the official documentation of giscus to use the following configuration.
+    repo = "tltmzmaos/tltmzmaos.github.io"
+    repoId = "MDEwOlJlcG9zaXRvcnkzNTYxNDEzMjA="
+    category = "General"
+    categoryId = "DIC_kwDOFTpJCM4Ccpg8"
+    # automatically adapt the current theme i18n configuration when empty
+    lang = "en"
+    mapping = "pathname"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    lazyLoading = false
+    lightTheme = "light"
+    darkTheme = "dark"
